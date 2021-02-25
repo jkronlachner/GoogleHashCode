@@ -44,7 +44,7 @@ public class Main {
                 for (Interception intercection:
                         intercetions
                      ) {
-                    if(intercection.ins.stream().anyMatch(x => x.name == streetName)){
+                    if(intercection.ins.stream().anyMatch(street -> street.name.equals(streetName))){
                         interception = intercection;
                     }
                 }
